@@ -245,7 +245,7 @@ h3 {
 .pickles-jam h3,
 .pickles-jam .dishes__icon-box {
 	border-color: rgba(190, 190, 190, 0.5);
-	border-color: var(--color-green-light);
+	border-color: var(--color-blue-dark);
 }
 
 /* ! -------------------- footer -------------------- */
