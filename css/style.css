@@ -1,0 +1,687 @@
+:root {
+	--color-text-dark: #26292B;
+	--color-text-light: #2E3239;
+
+	--color-gray-light: rgb(240, 240, 240);
+	--color-blue-light: rgba(88, 132, 204, 1);
+	--color-blue-dark: rgba(45, 105, 172, 1);
+	--color-red-light: rgba(230, 41, 55, 1);
+	--color-red-dark: rgba(175, 16, 35, 1);
+	--color-orange-light: rgba(255, 129, 44, 1);
+	--color-orange-dark: rgba(255, 103, 0, 1);
+	--color-green-light: rgba(153, 206, 25, 1);
+	--color-green-dark: rgba(129, 170, 0, 1);
+	--color-beige-light: rgba(224, 170, 104, 1);
+	--color-beige-dark: rgba(181, 122, 78, 1);
+	--color-brown: rgba(127, 68, 28, 1);
+
+	--color-border-recip-description: rgba(202, 200, 200, 0.9);
+	--bg-table-row-gray-light: rgb(220, 220, 220);
+
+	--color-background-copyright: rgba(255, 255, 255, 0.5);
+}
+
+/* ! -------------------- общие стили -------------------- */
+
+html {
+	font-family: 'Marmelad', 'Roboto', sans-serif;
+	color: var(--color-text-dark);
+}
+
+body {
+	background-image: url(../image/noise.png);
+}
+
+.header {
+	margin-top: 20px;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.container {
+	width: clamp(300px, 100%, 1400px);
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Lobster', sans-serif;
+	color: var(--color-text-dark);
+	text-shadow: 1px 1px 3px var(--color-text-light);
+}
+
+h1 {
+	font-size: 6rem;
+	letter-spacing: 0.1em;
+	text-align: center;
+	transform: rotate(-3deg);
+	margin: 50px 0 0 0;
+}
+
+h2 {
+	font-size: 4rem;
+	letter-spacing: 0.05em;
+	text-align: center;
+}
+
+h3 {
+	color: var(--color-text-dark);
+	font-size: 4rem;
+	letter-spacing: 0.05em;
+	text-align: center;
+}
+
+h4 {
+	color: var(--color-text-dark);
+	font-size: 3rem;
+	letter-spacing: 0.05em;
+	text-align: center;
+	line-height: 1.5;
+	padding: 10px 5px 10px 10px;
+}
+
+/* ! -------------------------------------------------- */
+/* ! ------------------- файл зміст ------------------- */
+/* ! -------------------------------------------------- */
+
+/* ! -------------------- header -------------------- */
+
+.header__wrapper {
+	padding: 0 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.header__logo {
+	width: 300px;
+	width: clamp(250px, 40%, 400px);
+	margin-bottom: 30px;
+}
+
+.header__logo img {
+	width: 100%;
+}
+
+.header__icon {
+	width: 200px;
+	width: clamp(200px, 20%, 400px);
+}
+
+.header__icon img {
+	width: 100%;
+	margin-top: -35px;
+}
+
+/* ! -------------------- main -------------------- */
+
+/* ===== загальні стилі для блоків категорій ===== */
+
+.box {
+	padding: 5px;
+	margin-top: 100px;
+}
+
+.dishes {
+	border: 20px solid transparent;
+	border-radius: 20px;
+	position: relative;
+}
+
+h3 {
+	display: inline-block;
+	border: 5px solid transparent;
+	border-radius: 20px;
+	padding: 20px 40px;
+	background-color: rgb(240, 240, 240);
+	background-color: var(--color-gray-light);
+	position: absolute;
+	top: -55px;
+	right: 10%;
+}
+
+.dishes__icon-box {
+	position: absolute;
+	top: -80px;
+	left: 30px;
+	width: 140px;
+	height: 140px;
+	border: 5px solid transparent;
+	border-radius: 20px;
+	padding: 15px;
+	background-color: rgb(240, 240, 240);
+	background-color: var(--color-gray-light);
+}
+
+.dishes__icon-box img {
+	width: 100%;
+}
+
+.dishes__list-box {
+	margin: 100px 0 20px 0;
+}
+
+.dishes__list {
+	font-size: 2.5rem;
+	width: clamp(300px, 60%, 600px);
+	margin: 0 auto;
+}
+
+.dishes__list-item {
+	margin-bottom: 0.75em;
+	padding-left: 2em;
+	line-height: 1.3;
+
+	background-image: url(../logo/list-item-061.png);
+	background-repeat: no-repeat;
+	background-size: 1.3em;
+}
+
+.dishes__list-link {
+	color: #26292B;
+	color: var(--color-text-dark);
+	border-bottom: 1px solid transparent;
+	transition: all 0.5s ease;
+}
+
+.dishes__list-link:hover {
+	border-bottom: 1px solid var(--color-text-light);
+}
+
+/* ===== Перші страви / first-courses ===== */
+
+.first-courses .dishes,
+.first-courses h3,
+.first-courses .dishes__icon-box {
+	border-color: rgba(190, 190, 190, 0.5);
+	border-color: var(--color-blue-light);
+}
+
+/* ===== Другі страви / second-courses ===== */
+
+.second-courses .dishes,
+.second-courses h3,
+.second-courses .dishes__icon-box {
+	border-color: rgba(190, 190, 190, 0.5);
+	border-color: var(--color-orange-light);
+}
+
+/* ===== М'ясні страви / meat-dishes ===== */
+
+.meat-dishes .dishes,
+.meat-dishes h3,
+.meat-dishes .dishes__icon-box {
+	border-color: rgba(190, 190, 190, 0.5);
+	border-color: var(--color-beige-light);
+}
+
+/* ===== Випічка / baking ===== */
+
+.baking .dishes,
+.baking h3,
+.baking .dishes__icon-box {
+	border-color: rgba(190, 190, 190, 0.5);
+	border-color: var(--color-red-light);
+}
+
+/* ===== Консервація / canning ===== */
+
+.canning .dishes,
+.canning h3,
+.canning .dishes__icon-box {
+	border-color: rgba(190, 190, 190, 0.5);
+	border-color: var(--color-green-light);
+}
+
+/* ! -------------------- footer -------------------- */
+
+.footer-top-margin {
+	margin-top: 50px;
+}
+
+.footer__copyright-box {
+	filter: drop-shadow(8px 8px 10px var(--color-text-light));
+	position: relative;
+	min-height: 58px;
+	transition: all 0.5s ease-out;
+}
+
+.footer__copyright-box img {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+	width: 300px;
+}
+
+.copyright {
+	font-family: 'Rubik Vinyl', 'Roboto', sans-serif;
+	color: var(--color-text-light);
+	position: absolute;
+	top: 12px;
+	left: 50%;
+	transform: translate(-50%);
+	font-size: 1.6rem;
+	font-weight: 600;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.footer__copyright-box [data-tooltip]::after {
+	content: attr(data-tooltip);
+	opacity: 0;
+	font-size: 1.6rem;
+	color: var(--color-text-light);
+	padding: 1em 2em;
+	max-width: 200px;
+	line-height: 1.25;
+	text-align: center;
+	border: 3px solid var(--color-orange-light);
+	border-radius: 10px;
+	background-color: var(--color-border-recip-description);
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translate(-50%);
+	pointer-events: none;
+	transition: all 0.3s ease-out;
+}
+
+.footer__copyright-box [data-tooltip]:hover::after {
+	opacity: 1;
+	top: -90px;
+}
+
+.footer__img-box {
+	width: 100%;
+	overflow: hidden;
+}
+
+.footer__img-box img {
+	width: 1400px;
+}
+
+/* ! ----------------------------------------------------------- */
+/* ! ------------------- файл картка рецепту ------------------- */
+/* ! ----------------------------------------------------------- */
+
+/* ===== спільні стилі для всих блоків: фото, інгридієнти, опис, відео, примітки -=- general-block-styles ===== */
+
+.back-to-content {
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+	position: relative;
+	margin: 60px 0;
+}
+
+.back-to-content__button {
+	width: 80px;
+	height: 80px;
+	border: 3px solid var(--color-border-recip-description);
+	border-radius: 15px;
+	background-color: var(--bg-table-row-gray-light);
+	box-shadow: 2px 2px 5px var(--color-text-dark);
+}
+
+.back-to-content__button img {
+	width: 100%;
+	height: 100%;
+}
+
+.back-to-content__button [data-tooltip]::after {
+	content: attr(data-tooltip);
+	opacity: 0;
+	font-size: 1.6rem;
+	color: var(--color-text-light);
+	padding: 1em 2em;
+	max-width: 200px;
+	line-height: 1.25;
+	text-align: center;
+	border: 3px solid var(--color-orange-light);
+	border-radius: 10px;
+	background-color: var(--color-border-recip-description);
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translate(-50%);
+	pointer-events: none;
+	transition: all 0.3s ease-out;
+}
+
+.back-to-content__button [data-tooltip]:hover::after {
+	opacity: 1;
+	top: -90px;
+}
+
+/* ===== section ===== */
+
+.section {
+	margin: 50px 0 0 0;
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+
+.general-block-styles {
+	border: 7px solid rgba(190, 190, 190, 0.5);
+	border: 10px solid var(--color-border-recip-description);
+	border-radius: 20px;
+	position: relative;
+	margin: 50px 0 0 50px;
+}
+
+.box-icon {
+	width: 90px;
+	height: 90px;
+	padding: 10px;
+	background-color: rgb(230, 230, 230);
+	background-color: var(--color-border-recip-description);
+	border: 7px solid rgb(190, 190, 190);
+	border: 10px solid var(--color-border-recip-description);
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: -50px;
+}
+
+.box-icon img {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(1px 1px 2px var(--color-text-dark));
+}
+
+/* ===== section photo-and-ingredients */
+
+.photo-recipe {
+	width: 300px;
+	flex-grow: 1;
+}
+
+/* ===== swiper ===== */
+
+.swiper {
+	padding: 3px;
+}
+
+.swiper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.button-pagination-wrapper {
+	display: flex;
+	justify-content: space-around;
+	width: 40%;
+	margin: 0 auto;
+}
+
+.my-swiper-pagination {
+	font-size: 1.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.my-button-prev,
+.my-button-next {
+	cursor: pointer;
+	width: 50px;
+}
+
+.my-button-prev img,
+.my-button-next img {
+	width: 100%;
+}
+
+
+/* ===== ingredients ===== */
+
+.ingredients {
+	width: 300px;
+	flex-grow: 3;
+}
+
+.table {
+	margin: 0 auto;
+	padding: 5px;
+	font-size: 2rem;
+	width: 90%;
+}
+
+.table tr:nth-child(odd) {
+	background-color: var(--bg-table-row-gray-light);
+}
+
+.table td {
+	padding: 10px;
+}
+
+.table td:nth-child(even) {
+	text-align: center;
+}
+
+/* ===== section description-and-video ===== */
+
+.description {
+	width: 300px;
+	flex-grow: 3;
+}
+
+.description__list {
+	font-size: 1.8rem;
+	padding: 10px;
+}
+
+.description__item {
+	padding-left: 30px;
+	background-image: url(../logo/list-item-070-64.png);
+	background-repeat: no-repeat;
+	background-size: 1.5rem;
+}
+
+.description__item:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.video {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	flex-grow: 1;
+	padding: 20px;
+}
+
+.video-wrapper {
+	height: 150px;
+	width: 300px;
+	display: flex;
+	align-items: center;
+}
+
+.video-wrapper img {
+	width: 100%;
+}
+
+.video-wrapper iframe {
+	width: 100%;
+}
+
+/* iframe {
+	height: 150px;
+	width: 300px;
+} */
+
+/* ===== section notation ===== */
+
+.notation-wrapper {
+	width: 75%;
+}
+
+/* ! --------------------------------------------------------- */
+/* ! -------------------- media index page-------------------- */
+/* ! --------------------------------------------------------- */
+
+@media screen and (max-width: 800px) {
+	h1 {
+		font-size: 4rem;
+	}
+
+	h3 {
+		font-size: 3rem;
+		top: -50px;
+		right: 10px;
+		padding: 20px;
+	}
+
+	.dishes__list {
+		font-size: 2rem;
+	}
+
+	.dishes__icon-box {
+		top: -70px;
+		left: 10px;
+		width: 120px;
+		height: 120px;
+		padding: 10px;
+	}
+
+	.dishes__list-box {
+		margin-top: 70px;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+
+	.header__wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.header__icon {
+		max-width: 150px;
+	}
+
+	.dishes {
+		border-width: 10px;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		margin-top: 15px;
+	}
+
+	.box {
+		margin-top: 65px;
+	}
+
+	h3 {
+		font-size: 2.5rem;
+		top: -45px;
+		right: 5px;
+		left: 120px;
+		padding: 20px;
+	}
+
+	.dishes__icon-box {
+		top: -60px;
+		left: 5px;
+		width: 110px;
+		height: 110px;
+		padding: 5px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+
+	h3 {
+		font-size: 2rem;
+		top: -35px;
+		right: 5px;
+		left: 110px;
+		padding: 15px 10px;
+	}
+
+	.dishes__icon-box {
+		top: -55px;
+		left: 5px;
+		width: 100px;
+		height: 100px;
+		padding: 5px;
+	}
+
+	.dishes__list {
+		font-size: 1.8rem;
+	}
+}
+
+/* ! --------------------------------------------------------- */
+/* ! -------------------- media recipe page-------------------- */
+/* ! --------------------------------------------------------- */
+
+@media screen and (max-width: 1023px) {
+
+	h4 {
+		font-size: 2.4rem;
+	}
+
+	.table {
+		font-size: 1.8rem;
+	}
+
+	.section {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.general-block-styles {
+		margin: 50px 0 0 40px;
+	}
+
+	.photo-recipe,
+	.ingredients,
+	.description,
+	.video {
+		width: 75%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.section:not(:first-child) {
+		margin: 0;
+	}
+
+	.general-block-styles {
+		border-width: 5px;
+		margin: 50px 2px 0 30px;
+	}
+
+	.box-icon {
+		border-width: 5px;
+		padding: 15px;
+		width: 70px;
+		height: 70px;
+		top: -35px;
+		left: -35px;
+	}
+
+	.photo-recipe,
+	.ingredients,
+	.description,
+	.video,
+	.notation-wrapper {
+		width: 92%;
+	}
+}
