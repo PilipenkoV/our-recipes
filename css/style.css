@@ -400,6 +400,7 @@ h3 {
 	position: absolute;
 	top: -50px;
 	left: -50px;
+	z-index: 2;
 }
 
 .box-icon img {
@@ -467,6 +468,15 @@ h3 {
 	width: 90%;
 }
 
+.ingredients span {
+	width: fit-content;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.4rem;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
 .table tr:nth-child(odd) {
 	background-color: var(--bg-table-row-gray-light);
 }
@@ -475,7 +485,7 @@ h3 {
 	padding: 10px;
 }
 
-.table td:nth-child(even) {
+.table td:not(:first-child) {
 	text-align: center;
 }
 
