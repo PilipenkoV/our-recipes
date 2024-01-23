@@ -41,6 +41,7 @@ body {
 }
 
 .container {
+	max-width: 1400px;
 	width: clamp(300px, 100%, 1400px);
 	margin: 0 auto;
 }
@@ -271,6 +272,7 @@ h3 {
 
 .copyright {
 	font-family: 'Rubik Vinyl', 'Roboto', sans-serif;
+	color: #33363b;
 	color: var(--color-text-light);
 	position: absolute;
 	top: 12px;
@@ -478,6 +480,7 @@ h3 {
 }
 
 .table tr:nth-child(odd) {
+	background-color: rgb(230, 230, 230);
 	background-color: var(--bg-table-row-gray-light);
 }
 
