@@ -473,10 +473,10 @@ h3 {
 .ingredients span {
 	width: fit-content;
 	display: block;
-	margin: 0 auto;
-	font-size: 1.4rem;
+	margin: 0 auto 10px;
+	font-size: 1.8rem;
 	font-style: italic;
-	margin-bottom: 10px;
+	text-align: center;
 }
 
 .table tr:nth-child(odd) {
