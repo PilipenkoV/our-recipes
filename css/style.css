@@ -249,6 +249,15 @@ h3 {
 	border-color: var(--color-blue-dark);
 }
 
+/* ===== Разное / different ===== */
+
+.different-recipes .dishes,
+.different-recipes h3,
+.different-recipes .dishes__icon-box {
+	border-color: rgba(190, 190, 190, 0.5);
+	border-color: var(--color-red-dark);
+}
+
 /* ! -------------------- footer -------------------- */
 
 .footer-top-margin {
@@ -380,6 +389,7 @@ h3 {
 	flex-wrap: wrap;
 	align-content: center;
 	justify-content: center;
+	align-items: flex-start;
 }
 
 .general-block-styles {
@@ -502,6 +512,15 @@ h3 {
 .description__list {
 	font-size: 1.8rem;
 	padding: 10px;
+}
+
+.description__list span {
+	width: fit-content;
+	display: block;
+	margin: 0 0 20px 40px;
+	font-size: 1.8rem;
+	font-style: italic;
+	text-align: center;
 }
 
 .description__item {
