@@ -726,3 +726,58 @@ h3 {
 		width: 92%;
 	}
 }
+
+
+/* ! --------------------------------------------------------- */
+/* ! -------------------- media PRINT STYLES -------------------- */
+/* ! --------------------------------------------------------- */
+
+@media print {
+
+	.header__logo {
+		width: 5cm;
+	}
+
+	.header__icon {
+		width: 3cm;
+	}
+
+	.button-pagination-wrapper,
+	.video,
+	.back-to-content {
+		display: none;
+	}
+
+	h2 {
+		font-size: 2.4rem;
+	}
+
+	h4 {
+		font-size: 2rem;
+	}
+
+	.table {
+		font-size: 1.8rem;
+	}
+
+	.box-icon {
+		width: 2cm;
+		height: 2cm;
+	}
+
+	.box-icon,
+	.general-block-styles {
+		border-width: 1mm;
+	}
+
+	.photo-recipe {
+		width: 5cm;
+	}
+
+	.swiper img {
+		width: 5cm;
+	}
+
+
+
+}
