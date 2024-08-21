@@ -727,6 +727,18 @@ h3 {
 	}
 }
 
+@media screen and (max-width: 365px) {
+	.copyright {
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (max-width: 325px) {
+	.copyright {
+		font-size: 1.2rem;
+	}
+}
+
 
 /* ! --------------------------------------------------------- */
 /* ! -------------------- media PRINT STYLES -------------------- */
